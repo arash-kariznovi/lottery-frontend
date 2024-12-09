@@ -6,11 +6,19 @@ const withdrawButton = document.getElementById("withdrawButton")
 const fundButton = document.getElementById("fundButton")
 const balanceButton = document.getElementById("balanceButton")
 const totalFunded = document.getElementById("totalFunded");
+const enterRaffleButton = document.getElementById("enterRaffleButton");
+
 totalFunded.textContent = "..."
 connectButton.onclick = connect
 withdrawButton.onclick = withdraw
 fundButton.onclick = fund
 balanceButton.onclick = getBalance
+enterRaffleButton.onclick = enterRaffle
+
+
+async function enterRaffle(){
+
+}
 
 
 async function connect() {
