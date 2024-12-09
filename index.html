@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Raffle App</title>
+    <style>
+      /* Reset and base styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #000000;
+      }
+
+      .container {
+        background: #fff1e6;
+        border: 1px solid #ffa69e;
+        border-radius: 15px;
+        padding: 30px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin: 20px 0 10px;
+        font-size: 1.1rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ffa69e;
+        border-radius: 5px;
+        background: #fffaf3;
+        color: #333;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #ff7e5f;
+        box-shadow: 0 0 5px rgba(255, 126, 95, 0.6);
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 126, 95, 0.3);
+      }
+
+      button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(255, 126, 95, 0.2);
+      }
+
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .button-group button {
+        flex: 1;
+        min-width: 100px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #ffa69e;
+      }
+
+      .footer a {
+        color: #ff7e5f;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        button {
+          font-size: 0.9rem;
+          padding: 10px;
+        }
+
+        label {
+          font-size: 1rem;
+        }
+
+        .container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Raffle Draw</h1>
+      <p id="raffleStatus">No winner selected yet!</p>
+      <label for="participantName">Your Name</label>
+      <input id="participantName" placeholder="Enter your name" />
+      <label for="ticketAmount">Ticket Amount (ETH)</label>
+      <input id="ticketAmount" placeholder="0.01" />
+      <div class="button-group">
+        <button id="enterButton">Enter Raffle</button>
+        <button id="pickWinnerButton">Pick Winner</button>
+      </div>
+      <div class="footer">
+        <p>
+          Powered by <a href="https://ethereum.org" target="_blank">Ethereum</a>
+        </p>
+      </div>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
